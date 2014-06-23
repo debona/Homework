@@ -1,7 +1,17 @@
 doctype html
-html
+html(ng-app)
   head
     title= title
+    link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+
+    script(src='/lib/jquery/dist/jquery.min.js')
+    script(src='/lib/angular/angular.js')
+    script(src='/lib/angular-mocks/angular-mocks.js')
+    script(src='/lib/angular-cookies/angular-cookies.js')
+    script(src='/lib/angular-resource/angular-resource.js')
+    script(src='/lib/angular-ui-router/release/angular-ui-router.js')
+    script(src='/lib/angular-bootstrap/ui-bootstrap.js')
+    script(src='/lib/angular-bootstrap/ui-bootstrap-tpls.js')
   body
     block content
