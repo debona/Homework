@@ -16,8 +16,10 @@ html
 
     script(src='/app/homework.js')
     script(src='/app/controllers/home.js')
+    script(src='/app/controllers/header.js')
     script(src='/app/routes/homework.js')
 
   body
+    header(data-ng-include="'/app/views/header.html'", data-role='navigation')
     section(data-ui-view)
       block content
