@@ -1,0 +1,91 @@
+
+.login-box {
+  padding-top: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .login-head div {
+    float: left;
+    width: 100%;
+  }
+  .login-thirdparty {
+    float: left;
+    width: 41.66666667%;
+  }
+  .login-divider-lg {
+    float: left;
+    width: 8.33333333%;
+  }
+  .login-form {
+    float: left;
+    width: 50%;
+  }
+}
+.login-head div {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.login-form, .login-thirdparty {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.login-divider-lg {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEXd3d3u346CAAAACklEQVQIHWNgAAAAAgABz8g15QAAAABJRU5ErkJggg==) repeat-y center top;
+  line-height: 220px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.login-divider-sm {
+  display: none!important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.login-divider-sm hr {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+}
+
+.login-divider-sm span {
+  font-weight: 700;
+  display: block;
+  position: relative;
+  left: 50%;
+  top: -8px;
+  margin-left: -25px;
+  background-color: #fff;
+  width: 50px;
+  text-align: center;
+}
+
+@media (max-width: 767px){
+  .login-divider-sm {
+    display: block!important;
+  }
+  .login-divider-lg {
+    display: none!important;
+  }
+}
+
+
+.login-form, .login-thirdparty {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
