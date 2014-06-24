@@ -1,5 +1,5 @@
 doctype html
-html(ng-app)
+html
   head
     title= title
     link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.css')
@@ -13,5 +13,11 @@ html(ng-app)
     script(src='/lib/angular-ui-router/release/angular-ui-router.js')
     script(src='/lib/angular-bootstrap/ui-bootstrap.js')
     script(src='/lib/angular-bootstrap/ui-bootstrap-tpls.js')
+
+    script(src='app/homework.js')
+    script(src='app/controllers/home.js')
+    script(src='app/routes/homework.js')
+
   body
-    block content
+    section(data-ui-view)
+      block content
