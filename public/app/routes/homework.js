@@ -7,7 +7,7 @@ angular.module('homework').config(['$stateProvider', '$urlRouterProvider',
 
         $stateProvider.state('home', {
             url: '/',
-            templateUrl: 'app/views/index.html'
+            templateUrl: '/app/views/index.html'
         });
     }
 ]).config(['$locationProvider',
