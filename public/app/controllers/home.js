@@ -2,6 +2,6 @@
 
 angular.module('homework').controller('HomeController', ['$scope',
     function($scope) {
-      $scope.hello = 'Hello there';
+      $scope.hello = 'Hello Home';
     }
 ]);
