@@ -31,22 +31,20 @@
 				<div class="form-group" ng-class="{'has-warning': loginForm.login.$error.email}">
 					<label class="control-label" for="login">Identifiant</label>
 					<div class="input-group">
-						<input type="email" class="form-control" name="login" ng-model="user.login" ng-change="badCredentials = false" required="" placeholder="Entrer l'adresse e-mail" autocomplete="off" autofocus="">
+						<input type="email" class="form-control" name="login" ng-model="user.login" required="" placeholder="Entrer l'adresse e-mail" autocomplete="off" autofocus="">
 						<span class="input-group-addon">@</span>
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label class="control-label" for="password">Mot de passe</label>
-					<input type="password" class="form-control" name="password" ng-change="badCredentials = false" ng-model="user.password" placeholder="Entrer le mot de passe" autocomplete="off">
+					<input type="password" class="form-control" name="password" ng-model="user.password" placeholder="Entrer le mot de passe" autocomplete="off">
 				</div>
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" ng-model="user.remember_me"> Se souvenir de moi
 					</label>
 				</div>
-
-				<div ng-show="badCredentials" class="alert alert-danger">Mauvais identifiant ou mot de passe</div>
 
 				<button ng-click="tryLogin()" class="btn btn-primary" name="submit">Connexion</button>
 			</form>
