@@ -48,6 +48,11 @@
   text-align: center;
 }
 
+.login-divider-lg span {
+  background-color: white;
+  font-weight: bold;
+}
+
 .login-divider-sm {
   display: none!important;
   padding-top: 20px;

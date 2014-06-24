@@ -1,61 +1,55 @@
-<section data-ng-controller="LoginController">
+<section data-ng-controller="LoginController" class="container">
+	<div class="login-box">
 
-	<div class="container">
-		<div class="login-box">
-			<div class="login-head">
-				<div>
-					<img src="/images/logo-iwe-s.png" alt="IWe Logo"> 
-					<hr>
-				</div>
-			</div>
-			<div class="login-body">
-				<div class="login-thirdparty">
-					<button class="btn btn-default ng-binding" ng-click="googleLogin()"><img src="/images/google_64.png" width="32">S'identifier via Google</button>
-					<div class="checkbox">
-						<label class="ng-binding">
-							<input type="checkbox" ng-model="user.remember_me" class="clearfix ng-pristine ng-valid"> Se souvenir de moi
-						</label>
-					</div>
-					
-				</div>
-				<div class="login-divider-lg">
-					<span style="background-color: white; font-weight: bold;" class="ng-binding">ou</span>
-				</div>
-				<div class="login-divider-sm">
-					<hr>
-					<span class="ng-binding">ou</span>
-				</div>
-				<div class="login-form">
-					<form name="loginForm" class="ng-pristine ng-invalid ng-invalid-required">
-						<div class="form-group" ng-class="{'has-warning': loginForm.login.$error.email} ">
-							<label class="control-label ng-binding" for="login">Identifiant </label>
-							<div class="input-group">
-								<input type="email" class="form-control ng-pristine ng-invalid ng-invalid-required ng-valid-email" name="login" ng-model="user.login" ng-change="badCredentials = false" required="" placeholder="Entrer l'adresse e-mail" autocomplete="off" autofocus="">
-								<span class="input-group-addon">@</span>
-							</div>
-						</div>
-		
-						<div class="form-group">
-							<label class="control-label ng-binding" for="password">Mot de passe</label>
-							<input type="password" class="form-control ng-pristine ng-valid" name="password" ng-change="badCredentials = false" ng-model="user.password" placeholder="Entrer le mot de passe" autocomplete="off">
-						</div>
-						
-						<div class="checkbox">
-							<label class="ng-binding">
-								<input type="checkbox" ng-model="user.remember_me" class="ng-pristine ng-valid"> Se souvenir de moi
-							</label>
-						</div>
-						<div ng-show="badCredentials" class="alert alert-danger ng-binding ng-hide">Mauvais identifiant ou mot de passe</div>
-						<button ng-click="tryLogin()" class="btn btn-primary ng-binding" name="submit">Connexion</button>
-					</form>
-				</div>
-			</div>
+		<div class="login-head">
+			<img src="/images/logo-iwe-s.png" alt="IWe Logo">
+			<hr/>
 		</div>
-		<div ng-show="customer.domain == 'demo'" class="well pull-right ng-hide" style="background-color: #F9FF9A">
-			<h4 class="ng-binding">Compte de démonstration</h4>
-			<p><strong class="ng-binding">Identifiant: </strong><a class="link ng-binding" ng-click="filldemo()">demo@iwecloud.com</a></p>
-			<p class="ng-binding"><strong class="ng-binding">Mot de passe: </strong>demo</p>
+
+		<div class="login-body">
+
+			<div class="login-thirdparty">
+				<button class="btn btn-default" ui-sref="activity"><img src="/images/google_64.png" width="32">
+					S'identifier via Google
+				</button>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" ng-model="user.remember_me" class="clearfix"> Se souvenir de moi
+					</label>
+				</div>
+			</div>
+
+			<div class="login-divider-lg">
+				<span>ou</span>
+			</div>
+			<div class="login-divider-sm">
+				<hr/>
+				<span>ou</span>
+			</div>
+
+			<form name="loginForm" class="login-form">
+				<div class="form-group" ng-class="{'has-warning': loginForm.login.$error.email}">
+					<label class="control-label" for="login">Identifiant</label>
+					<div class="input-group">
+						<input type="email" class="form-control" name="login" ng-model="user.login" ng-change="badCredentials = false" required="" placeholder="Entrer l'adresse e-mail" autocomplete="off" autofocus="">
+						<span class="input-group-addon">@</span>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="password">Mot de passe</label>
+					<input type="password" class="form-control" name="password" ng-change="badCredentials = false" ng-model="user.password" placeholder="Entrer le mot de passe" autocomplete="off">
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" ng-model="user.remember_me"> Se souvenir de moi
+					</label>
+				</div>
+
+				<div ng-show="badCredentials" class="alert alert-danger">Mauvais identifiant ou mot de passe</div>
+
+				<button ng-click="tryLogin()" class="btn btn-primary" name="submit">Connexion</button>
+			</form>
 		</div>
 	</div>
-
 </section>
