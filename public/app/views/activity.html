@@ -1,5 +1,5 @@
 <section data-ng-controller="ActivityController">
-	<google-map class="activity" center="selectedActivity.location" zoom="scale" pan="true">
+	<google-map class="activity" center="selectedActivity.location" zoom="scale" pan="true" options="{scrollwheel: false, streetViewControl: false}">
 		<marker ng-repeat="activity in recentActivities" coords="activity.location" click="select(activity)"></marker>
 	</google-map>
 	<table class="activities">
