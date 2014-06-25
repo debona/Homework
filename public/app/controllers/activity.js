@@ -76,5 +76,9 @@ angular.module('homework').controller('ActivityController', ['$scope',
           }
         }
       ];
+      $scope.selectedActivity = $scope.recentActivities[0];
+      $scope.select = function select(activity) {
+        $scope.selectedActivity = activity;
+      }
     }
 ]);

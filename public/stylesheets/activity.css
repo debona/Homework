@@ -5,3 +5,7 @@ table.activities {
 table.activities tr {
   height: 2em;
 }
+
+table.activities tr.selected {
+  background-color: red;
+}

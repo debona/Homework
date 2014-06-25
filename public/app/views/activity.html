@@ -6,7 +6,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="activity in recentActivities">
+			<tr ng-class="{selected: activity == selectedActivity}" ng-repeat="activity in recentActivities" ng-click="select(activity)">
 				<td>{{activity.date | date : 'd/M/yy à H:mm:ss'}}</td>
 				<td>{{activity.browser}}</td>
 				<td>{{activity.ip}}</td>
