@@ -25,7 +25,9 @@ angular.module('homework').controller('ActivityController', ['$scope',
 			return activities;
 		}
 
-		$scope.recentActivities = $scope.randomize(10);
+		$scope.recentActivities = $scope.randomize(10).sort( function (item, nextItem) {
+			return item.date < nextItem.date;
+		});
 
 		$scope.selectedActivity = $scope.recentActivities[0];
 		$scope.select = function select(activity) {
