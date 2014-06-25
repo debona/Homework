@@ -2,16 +2,15 @@
 	<table class="activities">
 		<thead>
 			<tr>
-				<th>date</th><th>browser</th><th>ip</th><th>latitude</th><th>longitude</th>
+				<th colspan="2">date</th><th>browser</th><th>ip</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr ng-class="{selected: activity == selectedActivity}" ng-repeat="activity in recentActivities" ng-click="select(activity)">
-				<td>{{activity.date | date : 'd/M/yy à H:mm:ss'}}</td>
+				<td>{{activity.date | date : 'd/M/yy'}}</td>
+				<td>{{activity.date | date : 'H:mm:ss'}}</td>
 				<td>{{activity.browser}}</td>
 				<td>{{activity.ip}}</td>
-				<td>{{activity.location.latitude}}</td>
-				<td>{{activity.location.longitude}}</td>
 			</tr>
 		</tbody>
 	</table>
