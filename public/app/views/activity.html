@@ -10,8 +10,8 @@
 		</thead>
 		<tbody>
 			<tr ng-class="{selected: activity == selectedActivity}" ng-repeat="activity in recentActivities" ng-click="select(activity)">
-				<td>{{activity.date | date : 'd/M/yy'}}</td>
-				<td>{{activity.date | date : 'H:mm:ss'}}</td>
+				<td>{{activity.date | date : 'dd/MM/yy'}}</td>
+				<td>{{activity.date | date : 'HH:mm'}}</td>
 				<td>{{activity.browser}}</td>
 				<td>{{activity.ip}}</td>
 			</tr>
