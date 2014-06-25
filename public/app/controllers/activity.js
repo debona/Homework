@@ -1,85 +1,36 @@
 'use strict';
 
 angular.module('homework').controller('ActivityController', ['$scope',
-    function($scope) {
-      $scope.recentActivities = [
-        {
-          date:    new Date('25 Jun 2014 10:30:00'),
-          browser: 'chrome',
-          ip:      '81.64.177.27',
-          location: {
-            latitude:  43.7031,
-            longitude: 7.2661
-          }
-        },
-        {
-          date:    new Date('24 Jun 2014 10:30:00'),
-          browser: 'firefox',
-          ip:      '81.64.177.28',
-          location: {
-            latitude:  43.7336,
-            longitude: 7.1863
-          }
-        },
-        {
-          date:    new Date('25 Jun 2014 12:30:00'),
-          browser: 'safari',
-          ip:      '36.65.65.65',
-          location: {
-            latitude:  40.7031,
-            longitude: 8.2661
-          }
-        },
-        {
-          date:    new Date('15 Jun 2014 10:30:00'),
-          browser: 'opera',
-          ip:      '99.99.99.99',
-          location: {
-            latitude:  3.4031,
-            longitude: 7.3421
-          }
-        },
-        {
-          date:    new Date('25 Jun 2014 10:30:00'),
-          browser: 'chrome',
-          ip:      '81.64.177.27',
-          location: {
-            latitude:  43.7031,
-            longitude: 7.2661
-          }
-        },
-        {
-          date:    new Date('24 Jun 2014 10:30:00'),
-          browser: 'firefox',
-          ip:      '81.64.177.27',
-          location: {
-            latitude:  43.7031,
-            longitude: 7.2661
-          }
-        },
-        {
-          date:    new Date('25 Jun 2014 12:30:00'),
-          browser: 'safari',
-          ip:      '36.65.65.65',
-          location: {
-            latitude:  40.7031,
-            longitude: 8.2661
-          }
-        },
-        {
-          date:    new Date('15 Jun 2014 10:30:00'),
-          browser: 'opera',
-          ip:      '99.99.99.99',
-          location: {
-            latitude:  3.4031,
-            longitude: 7.3421
-          }
-        }
-      ];
-      $scope.selectedActivity = $scope.recentActivities[0];
-      $scope.select = function select(activity) {
-        $scope.selectedActivity = activity;
-      }
-      $scope.scale = 9;
-    }
+	function($scope) {
+		$scope.randomizeActivity = function randomizeActivity(){
+			var today = new Date();
+			var browsers = ['chrome', 'opera', 'firefox', 'safari'];
+
+			return {
+				date:    new Date(today.getTime() - _.random(0, 60*60*24*7*1000)),
+				browser: browsers[_.random(0, browsers.length -1)],
+				ip:      _.random(12, 250) + '.' + _.random(12, 250) + '.' + _.random(12, 250) + '.' +_.random(12, 250),
+				location: {
+					latitude:  48.8589437 + Math.random() * 0.08 - 0.04,
+					longitude: 2.3452575 + Math.random() * 0.16 - 0.08
+				}
+			};
+		};
+
+		$scope.randomize = function randomize(length) {
+			var activities = [];
+			for (var i = 0; i < length; i++) {
+				activities.push($scope.randomizeActivity());
+			}
+			return activities;
+		}
+
+		$scope.recentActivities = $scope.randomize(10);
+
+		$scope.selectedActivity = $scope.recentActivities[0];
+		$scope.select = function select(activity) {
+			$scope.selectedActivity = activity;
+		}
+		$scope.scale = 11;
+	}
 ]);
