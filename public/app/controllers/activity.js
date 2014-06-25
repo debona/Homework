@@ -15,10 +15,10 @@ angular.module('homework').controller('ActivityController', ['$scope',
         {
           date:    new Date('24 Jun 2014 10:30:00'),
           browser: 'firefox',
-          ip:      '81.64.177.27',
+          ip:      '81.64.177.28',
           location: {
-            latitude:  43.7031,
-            longitude: 7.2661
+            latitude:  43.7336,
+            longitude: 7.1863
           }
         },
         {
@@ -80,5 +80,6 @@ angular.module('homework').controller('ActivityController', ['$scope',
       $scope.select = function select(activity) {
         $scope.selectedActivity = activity;
       }
+      $scope.scale = 9;
     }
 ]);

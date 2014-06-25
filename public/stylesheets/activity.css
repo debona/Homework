@@ -9,3 +9,7 @@ table.activities tr {
 table.activities tr.selected {
   background-color: red;
 }
+
+.activity .angular-google-map-container {
+  height: 300px;
+}
