@@ -1,36 +1,36 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/login.css')
-    link(rel='stylesheet', href='/stylesheets/activity.css')
+	head
+		title= title
+		link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/login.css')
+		link(rel='stylesheet', href='/stylesheets/activity.css')
 
-    script(src='/lib/jquery/dist/jquery.min.js')
-    script(src='/lib/bootstrap/dist/js/bootstrap.min.js')
-    script(src='//maps.googleapis.com/maps/api/js?sensor=false')
-    script(src='/lib/lodash/dist/lodash.underscore.min.js')
+		script(src='/lib/jquery/dist/jquery.min.js')
+		script(src='/lib/bootstrap/dist/js/bootstrap.min.js')
+		script(src='//maps.googleapis.com/maps/api/js?sensor=false')
+		script(src='/lib/lodash/dist/lodash.underscore.min.js')
 
-    script(src='/lib/angular/angular.js')
-    script(src='/lib/angular-mocks/angular-mocks.js')
-    script(src='/lib/angular-cookies/angular-cookies.js')
-    script(src='/lib/angular-resource/angular-resource.js')
-    script(src='/lib/angular-ui-router/release/angular-ui-router.js')
-    script(src='/lib/angular-bootstrap/ui-bootstrap.js')
-    script(src='/lib/angular-bootstrap/ui-bootstrap-tpls.js')
-    script(src='/lib/angular-google-maps/dist/angular-google-maps.min.js')
+		script(src='/lib/angular/angular.js')
+		script(src='/lib/angular-mocks/angular-mocks.js')
+		script(src='/lib/angular-cookies/angular-cookies.js')
+		script(src='/lib/angular-resource/angular-resource.js')
+		script(src='/lib/angular-ui-router/release/angular-ui-router.js')
+		script(src='/lib/angular-bootstrap/ui-bootstrap.js')
+		script(src='/lib/angular-bootstrap/ui-bootstrap-tpls.js')
+		script(src='/lib/angular-google-maps/dist/angular-google-maps.min.js')
 
-    script(src='/app/homework.js')
-    script(src='/app/controllers/home.js')
-    script(src='/app/controllers/activity.js')
-    script(src='/app/controllers/login.js')
-    script(src='/app/controllers/logout.js')
-    script(src='/app/controllers/header.js')
-    script(src='/app/routes/homework.js')
+		script(src='/app/homework.js')
+		script(src='/app/controllers/home.js')
+		script(src='/app/controllers/activity.js')
+		script(src='/app/controllers/login.js')
+		script(src='/app/controllers/logout.js')
+		script(src='/app/controllers/header.js')
+		script(src='/app/routes/homework.js')
 
-  body
-    header(data-ng-include="'/app/views/header.html'", data-role='navigation')
-    section(data-ui-view, class='container')
-      block content
-    footer(data-ng-include="'/app/views/footer.html'")
+	body
+		header(data-ng-include="'/app/views/header.html'", data-role='navigation')
+		section(data-ui-view, class='container')
+			block content
+		footer(data-ng-include="'/app/views/footer.html'")
