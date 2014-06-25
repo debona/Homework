@@ -1,5 +1,18 @@
 <section data-ng-controller="ActivityController">
-	<p>
-		Activity? {{hello}}
-	<p>
+	<table class="activities">
+		<thead>
+			<tr>
+				<th>date</th><th>browser</th><th>ip</th><th>latitude</th><th>longitude</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="activity in recentActivities">
+				<td>{{activity.date | date : 'd/M/yy à H:mm:ss'}}</td>
+				<td>{{activity.browser}}</td>
+				<td>{{activity.ip}}</td>
+				<td>{{activity.location.latitude}}</td>
+				<td>{{activity.location.longitude}}</td>
+			</tr>
+		</tbody>
+	</table>
 </section>
