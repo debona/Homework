@@ -6,7 +6,7 @@ angular.module('homework').factory('notificationCenter', function() {
 
 	this.type = '';
 	this.message = '';
-	this.show = false;
+	this.show = false; // FIXME refactor that, should avoid to set the state with a boolean
 
 	this.display = function display(message, type) {
 		this.type = type || defaultType;
