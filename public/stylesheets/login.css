@@ -1,11 +1,10 @@
-
 .login-box {
 	padding-top: 30px;
 	max-width: 800px;
 	margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media(min-width:768px) {
 	.login-head div {
 		float: left;
 		width: 100%;
@@ -23,14 +22,8 @@
 		width: 50%;
 	}
 }
-.login-head div {
-	position: relative;
-	min-height: 1px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
 
-.login-form, .login-thirdparty {
+.login-head div, .login-form, .login-thirdparty {
 	position: relative;
 	min-height: 1px;
 	padding-left: 15px;
@@ -49,8 +42,8 @@
 }
 
 .login-divider-lg span {
-	background-color: white;
-	font-weight: bold;
+	background-color: #fff;
+	font-weight: 700;
 }
 
 .login-divider-sm {
@@ -78,7 +71,7 @@
 	text-align: center;
 }
 
-@media (max-width: 767px){
+@media(max-width:767px) {
 	.login-divider-sm {
 		display: block!important;
 	}
@@ -86,7 +79,6 @@
 		display: none!important;
 	}
 }
-
 
 .login-form, .login-thirdparty {
 	position: relative;
