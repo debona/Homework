@@ -22,15 +22,18 @@ html
 		script(src='/lib/angular-google-maps/dist/angular-google-maps.min.js')
 
 		script(src='/app/homework.js')
+		script(src='/app/services/notification.js')
 		script(src='/app/controllers/home.js')
 		script(src='/app/controllers/activity.js')
 		script(src='/app/controllers/login.js')
 		script(src='/app/controllers/logout.js')
 		script(src='/app/controllers/header.js')
+		script(src='/app/controllers/notification.js')
 		script(src='/app/routes/homework.js')
 
 	body
 		header(data-ng-include="'/app/views/header.html'", data-role='navigation')
+		div(data-ng-include="'/app/views/notification.html'")
 		section(data-ui-view, class='container')
 			block content
 		footer(data-ng-include="'/app/views/footer.html'")

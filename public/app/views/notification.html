@@ -1,0 +1,4 @@
+<div data-ng-controller="NotificationController" class="alert alert-dismissable" ng-class="'alert-' + notification.type" ng-show="notification.show">
+	<button type="button" class="close" ng-click="notification.dismiss()">&times;</button>
+	{{notification.message}}
+</div>

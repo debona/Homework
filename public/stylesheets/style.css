@@ -31,3 +31,8 @@ footer {
 		margin-right: 1em;
 	}
 }
+
+.alert {
+	margin: 1em;
+	margin-bottom: 0;
+}
