@@ -13,8 +13,8 @@
 			<ul class="nav navbar-nav">
 				<li ui-sref-active="active"><a ui-sref="home">Home</a></li>
 				<li ui-sref-active="active"><a ui-sref="activity">Activity</a></li>
-				<li ui-sref-active="active"><a ui-sref="login">Login</a></li>
-				<li ui-sref-active="active"><a ui-sref="logout">Logout</a></li>
+				<li ui-sref-active="active" ng-hide="auth.isAuthenticated()"><a ui-sref="login">Login</a></li>
+				<li ng-show="auth.isAuthenticated()"><a ui-sref="home" ng-click="logout()">Logout</a></li>
 			</ul>
 		</div>
 	</div>

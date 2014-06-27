@@ -28,9 +28,6 @@ angular.module('homework').config(['$stateProvider', '$urlRouterProvider',
 		}).state('login', {
 			url: '/login',
 			templateUrl: '/app/views/login.html'
-		}).state('logout', {
-			url: '/logout',
-			templateUrl: '/app/views/logout.html'
 		});
 	}
 ]).config(['$locationProvider',
